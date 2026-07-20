@@ -285,7 +285,7 @@ For developer use cases, Mux or Bitmovin are better fits.
 | **Smart TV / STB player** | ✅ Best-in-class | ❌ | ❌ (3rd party) | ❌ | ⚠️ Basic |
 | **DRM** | ✅ Multi-DRM | ✅ | ✅ (Widevine+FP) | ❌ | ✅ |
 | **On-premise** | ✅ | ❌ | ❌ | ❌ | ✅ |
-| **Live** | ✅ | ✅ (MediaLive) | ✅ (Beta) | ✅ (Stream Live) | ✅ |
+| **Live** | ✅ | ✅ (MediaLive) | ✅ | ✅ (Stream Live) | ✅ |
 | **Analytics** | Good | Basic | Excellent | Basic | Basic |
 | **Pricing model** | Per-minute + player license | Per-minute | Storage + delivery | Storage + watched min | License / subscription |
 | **Best for** | TV/STB, high-quality VOD | AWS-native teams | Dev-first web/mobile | Simplest possible | On-prem live/broadcast |
