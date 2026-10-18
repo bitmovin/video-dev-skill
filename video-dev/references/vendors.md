@@ -305,6 +305,7 @@ Red5 is a US-based live streaming infrastructure and solutions provider focused 
 - More infrastructure-oriented than turnkey online video platforms such as Brightcove or JW Player; no bundled CMS-first publishing workflow.
 - Teams using Red5 Pro manage more of the deployment and operations themselves than with a fully managed SaaS product.
 - Less suitable for projects where the primary requirement is simple VOD upload, encoding, and playback rather than live or interactive streaming.
+- Red5's extensive capabilities and architectural flexibility can introduce unnecessary complexity for smaller projects with basic streaming requirements.
 
 ---
 
