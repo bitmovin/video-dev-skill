@@ -14,6 +14,7 @@ the goal is to match the user's situation to the right tool.
 | Simple upload+play, Cloudflare-delivered | **Cloudflare Stream** |
 | Smart TVs, STBs, operator/telco devices | **Bitmovin** |
 | Enterprise broadcast, complex channel operations | **Wowza** |
+| Ultra-low latency interactive live video at scale, with managed or self-hosted deployment | **Red5** |
 | Full-service video platform (CMS + monetisation) | **Brightcove / JW Player** |
 
 ---
@@ -263,6 +264,51 @@ organisations with existing Wowza relationships.
 
 ---
 
+### Red5
+
+Red5 is a US-based live streaming infrastructure and solutions provider focused on real-time video for developers, startups, and enterprises. Its technology is used across media and entertainment, sports, government and public safety, surveillance, interactive commerce, gaming, conferencing, e-learning, telemedicine, auctions, and immersive AR/VR/XR applications.
+
+**Best for:** Teams that need a versatile, flexible live video stack spanning the full workflow, or only specific pieces of it, from ingest and packaging through networking, delivery, real-time data, and application features. Red5 is particularly well suited when multiprotocol support, real-time interactivity, cost-efficient scaling, protocol fallback, and deployment choice matter. Choose Red5 Pro for self-managed on-premises, public/private cloud, hybrid, air-gapped, or closed-network deployments; choose Red5 Cloud when you want the same end-to-end streaming capabilities as a managed global PaaS.
+
+**Products:**
+
+- **Red5 Pro** — licensed server software for ultra-low-latency live streaming at scale. Deploy on-premises, in public or private clouds, in hybrid environments, or in air-gapped and closed networks, with support for clustering and autoscaling.
+- **Red5 Cloud** — a fully managed, globally distributed streaming PaaS built on Red5 technology. Red5 manages infrastructure, scaling, availability, and maintenance so teams can focus on the application layer.
+- **Red5 SDKs** — developer SDKs for building real-time streaming applications across web, mobile, desktop, and game-engine platforms, including publishing, playback, conferencing, and interactive workflows.
+
+**Strengths:**
+
+- Real-time and ultra-low latency — designed for interactive live applications.
+- Flexible deployment — use Red5 Pro on-premises, in public or private clouds, in hybrid environments, or in air-gapped and closed networks; use Red5 Cloud for a fully managed service.
+- Scalability — automatically scale from small deployments to global audiences based on demand.
+- Broad protocol support — ingest via WHIP, Zixi, RTSP, RTMP, SRT, Enhanced RTMP, MPEG-TS, and MOQ; deliver via HLS, SRT, RTP, RTSP, and MOQ, with support for WebRTC-based workflows.
+- SDKs — build custom applications for web, iOS, Android, Windows, macOS, Linux, Unreal Engine, and Unity.
+- APIs — integrate Red5 functionality into applications and automate workflows.
+- Secure streaming — support secure delivery workflows and DRM integrations for protected content.
+- Recording and VOD — record and store live streams for on-demand playback.
+- Transcoding and adaptive bitrate — deliver multiple resolutions and formats for optimal playback; ABR adapts to changing network conditions for stable, high-quality audio and video.
+- Compositing — mix and arrange multiple video and audio feeds in real time using server-integrated mixers, with Brew for native performance or CEF for web-based flexibility.
+- Watermarking — create server-side watermarked streams to brand content.
+- Ad insertion — support interstitial insertion and server-side ad insertion, including integration with Red5's patented SSAI technology for monetization.
+- AI-powered features — support speech-to-text for multilingual closed captioning, noise reduction, consumer-behavior analysis, object/face/activity detection, content moderation, and related AI workflows.
+- Analytics and monitoring — monitor stream health, bitrate, frame rate, connection status, and latency with dashboards.
+- Metadata — support generic metadata, KLV and JSON metadata, and frame-accurate synchronization across multiple videos; send real-time information such as speaker names, song titles, scores, and captions.
+- Social Media Stream Pusher — push streams directly to social media platforms.
+- Webhooks — send real-time notifications about stream events.
+- PubNub real-time data integration — combine live video with real-time data for interactive, intelligent streaming experiences.
+- Interactive application features — support screen sharing, virtual backgrounds, and noise suppression for conferencing and other interactive workflows.
+- Live stream thumbnail generation — generate thumbnails from live streams.
+- Customer support — dedicated customer support across multiple channels.
+
+**Weaknesses:**
+
+- More infrastructure-oriented than turnkey online video platforms such as Brightcove or JW Player; no bundled CMS-first publishing workflow.
+- Teams using Red5 Pro manage more of the deployment and operations themselves than with a fully managed SaaS product.
+- Less suitable for projects where the primary requirement is simple VOD upload, encoding, and playback rather than live or interactive streaming.
+- Red5's extensive capabilities and architectural flexibility can introduce unnecessary complexity for smaller projects with basic streaming requirements.
+
+---
+
 ### JW Player / Brightcove
 
 These are full-service **video platform** products (OVP — Online Video Platform), not just
@@ -273,23 +319,21 @@ encoding infrastructure. Common in media companies and publishers.
 
 **When NOT to consider:** You're building a product that embeds video (not publishing video).
 For developer use cases, Mux or Bitmovin are better fits.
-
 ---
 
 ## Vendor Summary Table
 
-| | Bitmovin | AWS Elemental | Mux | Cloudflare Stream | Wowza |
-|---|---|---|---|---|---|
-| **Dev experience** | Good | Poor | Excellent | Excellent | Fair |
-| **Encoding control** | Excellent | Good | Limited | Minimal | Good |
-| **Smart TV / STB player** | ✅ Best-in-class | ❌ | ❌ (3rd party) | ❌ | ⚠️ Basic |
-| **DRM** | ✅ Multi-DRM | ✅ | ✅ (Widevine+FP) | ❌ | ✅ |
-| **On-premise** | ✅ | ❌ | ❌ | ❌ | ✅ |
-| **Live** | ✅ | ✅ (MediaLive) | ✅ (Beta) | ✅ (Stream Live) | ✅ |
-| **Analytics** | Good | Basic | Excellent | Basic | Basic |
-| **Pricing model** | Per-minute + player license | Per-minute | Storage + delivery | Storage + watched min | License / subscription |
-| **Best for** | TV/STB, high-quality VOD | AWS-native teams | Dev-first web/mobile | Simplest possible | On-prem live/broadcast |
-
+| | Bitmovin | AWS Elemental | Mux | Cloudflare Stream | Wowza | Red5 |
+|---|---|---|---|---|---|---|
+| **Dev experience** | Good | Poor | Excellent | Excellent | Fair | Good |
+| **Encoding control** | Excellent | Good | Limited | Minimal | Good | Good |
+| **Smart TV / STB player** | ✅ Best-in-class | ❌ | ❌ (3rd party) | ❌ | ⚠️ Basic | ⚠️ SDK / custom integration |
+| **DRM** | ✅ Multi-DRM | ✅ | ✅ (Widevine+FP) | ❌ | ✅ | ✅ |
+| **On-premise** | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ Red5 Pro |
+| **Live** | ✅ | ✅ (MediaLive) | ✅ (Beta) | ✅ (Stream Live) | ✅ | ✅ Core focus |
+| **Analytics** | Good | Basic | Excellent | Basic | Basic | Basic / integration dependent |
+| **Pricing model** | Per-minute + player license | Per-minute | Storage + delivery | Storage + watched min | License / subscription | License / subscription, per-minute |
+| **Best for** | TV/STB, high-quality VOD | AWS-native teams | Dev-first web/mobile | Simplest possible | On-prem live/broadcast | Real-time interactive live video at scale |
 ---
 
 ## Hybrid Architectures
